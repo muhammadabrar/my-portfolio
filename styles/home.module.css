@@ -1,0 +1,124 @@
+
+.mousey {
+    width: 20px;
+    height: 30px;
+    border-radius: 6px;
+    padding: 0 6px;
+    border: 2px solid rgba(255, 255, 255, 0.41);
+    box-sizing: border-box;
+}
+
+.scroller {
+    position: relative;
+
+    top: px;
+    width: 3px;
+    height: 8px;
+    border-radius: 25%;
+    background-color: #000;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(16px);
+        opacity: 0;
+    }
+}
+
+
+
+.Availableindicator::before {
+    content: "";
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    background: var(--color-primary);
+    border-radius: 50%;
+    margin: 0 .5rem;
+    vertical-align: middle;
+    transform: translateY(-.1em);
+    animation: pulse-animation 2s infinite;
+    animation-delay: 3s;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 var(--color-primary)80;
+    }
+
+    100% {
+        box-shadow: 0 0 0 .5rem var(--color-primary)00;
+    }
+}
+
+
+.image {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for scaling */
+}
+
+
+.image:hover {
+    transform: scale(1.1);
+    /* Scales the image to 110% of its original size */
+}
+
+
+
+.introtxt {
+    font-size: clamp(2rem, 1.4vi + 1.2rem, 2.55rem);
+}
+
+.icon {
+    display: none;
+    transition: display 0.3s ease-in-out;
+    /* Smooth transition for scaling */
+
+}
+
+
+
+
+
+.cursor {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    top: 0%;
+    left: 0%;
+
+    
+}
+
+.cursorDot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    top: 0%;
+    left: 0%;
+}
+
+.videoSection{
+    
+}
